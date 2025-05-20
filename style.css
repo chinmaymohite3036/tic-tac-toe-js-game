@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  height: 100%;
+  text-align: center;
+}
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+#turnIndicator {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #1b1b1b;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  color: #b0413e;
+  font-size: 3rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+}
+#reset-btn:hover {
+  background-color: #dd5040;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+}
+#new-btn:hover {
+  color: black;
+  background-color: #3fd329;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#msg {
+  color:chocolate;
+  font-size: 8vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .game {
+    height: 80vmin;
+    width: 80vmin;
+  }
+
+  .box {
+    height: 24vmin;
+    width: 24vmin;
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #msg {
+    font-size: 10vmin;
+  }
+}
